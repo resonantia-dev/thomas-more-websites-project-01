@@ -1,0 +1,309 @@
+/* Portfolio Kenny Van Hoorick - Project 01 */
+
+/* Algemene opmaak */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4F6F8;
+    color: #11151C;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+a {
+    color: #176389;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigatie */
+
+header {
+    background-color: #11151C;
+    padding: 20px;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #F4F6F8;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #55D9FF;
+}
+
+.site-brand {
+    color: #55D9FF;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+/* Pagina-inhoud */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+main>h1 {
+    background-color: #11151C;
+    color: white;
+    padding: 30px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #B9C1CC;
+}
+
+/* Startpagina */
+
+#intro {
+    background-color: #11151C;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+#intro h1,
+#intro h2,
+#intro p,
+#intro .hero-actions {
+    grid-column: 1;
+}
+
+#intro h2 {
+    color: #55D9FF;
+}
+
+#intro img {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.hero-actions a {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #55D9FF;
+    color: #11151C;
+}
+
+/* Projecten op de startpagina */
+
+#projecten {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#projecten h2,
+#projecten>a {
+    grid-column: 1 / -1;
+}
+
+#projecten article {
+    border: 1px solid #B9C1CC;
+    padding: 15px;
+    min-width: 0;
+}
+
+#projecten article img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Curriculum Vitae */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #B9C1CC;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Ervaring en projecten */
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.project-gallery img {
+    display: block;
+    width: 100%;
+    border: 1px solid #B9C1CC;
+}
+
+#origin-signalbound {
+    background-color: #11151C;
+    color: white;
+}
+
+#origin-signalbound .project-gallery img:first-child {
+    grid-column: 1 / -1;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+/* Hobby's en interesses */
+
+.page-hobbys main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.page-hobbys main>h1,
+.page-hobbys main>section:first-of-type {
+    grid-column: 1 / -1;
+}
+
+.page-hobbys section {
+    margin-bottom: 0;
+    min-width: 0;
+}
+
+.page-hobbys section img {
+    display: block;
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+}
+
+/* Contact */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-details,
+.contact-form {
+    background-color: white;
+    border: 1px solid #B9C1CC;
+    padding: 25px;
+    min-width: 0;
+}
+
+.contact-details a {
+    overflow-wrap: anywhere;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.contact-form input[type="hidden"] {
+    display: none;
+}
+
+.contact-form button {
+    background-color: #11151C;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #176389;
+}
+
+/* Footer */
+
+footer {
+    background-color: #11151C;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Kleinere schermen */
+
+@media (max-width: 750px) {
+
+    #intro,
+    #projecten,
+    .page-hobbys main,
+    .contact-container,
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #intro img,
+    #intro h1,
+    #intro h2,
+    #intro p,
+    #intro .hero-actions {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #origin-signalbound .project-gallery img:first-child {
+        grid-column: 1;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .site-brand {
+        margin-right: 0;
+    }
+}
